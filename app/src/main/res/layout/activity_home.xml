@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:title="@string/app_name" />
+    <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="3dp" android:indeterminate="true" android:visibility="gone" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+            <TextView android:id="@+id/role" style="@style/Body" android:textSize="12sp" android:letterSpacing="0.14" android:textColor="@color/primary" />
+            <TextView android:id="@+id/greeting" style="@style/Title" android:layout_marginTop="12dp" />
+            <TextView android:id="@+id/intro" style="@style/Body" android:layout_marginTop="12dp" android:layout_marginBottom="24dp" />
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/primary" app:cardCornerRadius="20dp" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+                    <TextView android:id="@+id/stat_label" style="@style/Body" android:textColor="#DBEBDC" />
+                    <TextView android:id="@+id/stat" style="@style/Title" android:textSize="52sp" android:textColor="#FFFFFF" android:layout_marginTop="8dp" />
+                    <TextView android:id="@+id/stat_detail" style="@style/Body" android:textColor="#DBEBDC" android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView android:id="@+id/profile" style="@style/Body" android:layout_marginTop="24dp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/students" android:layout_width="match_parent" android:layout_height="64dp" android:layout_marginTop="24dp" android:text="@string/manage_students" app:cornerRadius="14dp" android:visibility="gone" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/scores" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="64dp" android:layout_marginTop="12dp" android:text="@string/view_scores" app:cornerRadius="14dp" />
+            <TextView style="@style/Body" android:text="@string/offline" android:textSize="12sp" android:layout_marginTop="28dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

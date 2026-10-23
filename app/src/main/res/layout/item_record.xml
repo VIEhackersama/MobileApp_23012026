@@ -1,0 +1,11 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:strokeColor="@color/line" app:strokeWidth="1dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <TextView android:id="@+id/item_tag" style="@style/Body" android:textColor="@color/primary" android:textSize="12sp" />
+        <TextView android:id="@+id/item_title" style="@style/Title" android:textSize="20sp" android:layout_marginTop="6dp" />
+        <TextView android:id="@+id/item_detail" style="@style/Body" android:layout_marginTop="8dp" />
+        <LinearLayout android:id="@+id/item_actions" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="end" android:layout_marginTop="8dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/item_edit" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="48dp" android:text="@string/edit" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/item_delete" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="48dp" android:text="@string/delete" android:textColor="#B3261E" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

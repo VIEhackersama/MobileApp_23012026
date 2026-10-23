@@ -1,0 +1,13 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" />
+    <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="3dp" android:indeterminate="true" android:visibility="gone" />
+    <TextView android:id="@+id/list_intro" style="@style/Body" android:paddingHorizontal="24dp" android:paddingVertical="12dp" />
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/search_field" style="@style/Field" android:layout_marginHorizontal="24dp">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/search" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/list" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingHorizontal="20dp" android:paddingBottom="100dp" android:clipToPadding="false" />
+        <TextView android:id="@+id/empty" style="@style/Body" android:layout_height="match_parent" android:gravity="center" android:padding="24dp" android:visibility="gone" />
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton android:id="@+id/add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom|end" android:layout_margin="24dp" app:icon="@drawable/ic_add" android:text="@string/add" android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

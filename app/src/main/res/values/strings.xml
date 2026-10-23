@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Sổ điểm</string>
+    <string name="login">Đăng nhập</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="save">Lưu</string>
+    <string name="cancel">Hủy</string>
+    <string name="delete">Xóa</string>
+    <string name="edit">Sửa</string>
+    <string name="username">Tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="remember">Ghi nhớ đăng nhập</string>
+    <string name="welcome">Việc học,\ntrong tầm tay.</string>
+    <string name="login_intro">Quản lý sinh viên và kết quả học tập trong một không gian gọn gàng.</string>
+    <string name="demo_accounts">TÀI KHOẢN DEMO\nGiáo viên: teacher01 / teacher123\nSinh viên: student01 / student123</string>
+    <string name="offline">Hoạt động ngoại tuyến • SQLite</string>
+    <string name="search_students">Tìm mã, họ tên hoặc email</string>
+    <string name="search_scores">Lọc theo môn, mã hoặc tên sinh viên</string>
+    <string name="empty_students">Chưa có sinh viên phù hợp.</string>
+    <string name="empty_scores">Chưa có điểm phù hợp.</string>
+    <string name="student_code">Mã sinh viên</string>
+    <string name="fullname">Họ và tên</string>
+    <string name="email">Email</string>
+    <string name="initial_password">Mật khẩu ban đầu (ít nhất 6 ký tự)</string>
+    <string name="subject">Môn học</string>
+    <string name="grade">Điểm (0–10)</string>
+    <string name="select_student">Sinh viên</string>
+    <string name="back">Quay lại</string>
+    <string name="manage_students">Quản lý sinh viên</string>
+    <string name="view_scores">Xem bảng điểm</string>
+    <string name="add">Thêm</string>
+    <string name="add_student">Thêm sinh viên</string>
+    <string name="add_score">Nhập điểm</string>
+    <string name="brand">SỔ ĐIỂM / STUDENT MANAGER</string>
+</resources>
