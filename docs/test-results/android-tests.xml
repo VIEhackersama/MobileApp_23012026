@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="19" failures="0" errors="0" skipped="0" time="47.56" timestamp="2026-10-23T10:05:53" hostname="localhost">
+  <testsuite name="com.example.fruitshop.AccountUiInstrumentedTest" tests="4" failures="0" errors="0" skipped="0" time="16.469" timestamp="2026-10-23T10:05:53" hostname="localhost">
+    <properties>
+      <property name="device" value="StudentManager_API35(AVD) - 15" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="adminHomeOnlyShowsAccountFoundation" classname="com.example.fruitshop.AccountUiInstrumentedTest" time="4.995" />
+    <testcase name="badLoginShowsErrorAndAllowsRetry" classname="com.example.fruitshop.AccountUiInstrumentedTest" time="2.338" />
+    <testcase name="registrationValidatesAndAutomaticallySignsInCustomer" classname="com.example.fruitshop.AccountUiInstrumentedTest" time="5.226" />
+    <testcase name="logoutClearsBackStackAndCannotRestoreProtectedScreen" classname="com.example.fruitshop.AccountUiInstrumentedTest" time="3.91" />
+  </testsuite>
+  <testsuite name="com.example.fruitshop.AuthSchemaInstrumentedTest" tests="10" failures="0" errors="0" skipped="0" time="27.498" timestamp="2026-10-23T10:05:53" hostname="localhost">
+    <properties>
+      <property name="device" value="StudentManager_API35(AVD) - 15" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="schemaPreservesOrderSnapshotsWhenFruitIsDeleted" classname="com.example.fruitshop.AuthSchemaInstrumentedTest" time="2.194" />
+    <testcase name="adminDoesNotNeedCustomerProfileAndRolesComeFromDatabase" classname="com.example.fruitshop.AuthSchemaInstrumentedTest" time="4.164" />
+    <testcase name="passwordsAreStoredAsSaltedHashes" classname="com.example.fruitshop.AuthSchemaInstrumentedTest" time="2.813" />
+    <testcase name="profileInsertFailureRollsBackAccount" classname="com.example.fruitshop.AuthSchemaInstrumentedTest" time="2.905" />
+    <testcase name="schemaRejectsInvalidQuantitiesRolesAndForeignKeys" classname="com.example.fruitshop.AuthSchemaInstrumentedTest" time="1.944" />
+    <testcase name="validationRejectsBadInputWithoutWrites" classname="com.example.fruitshop.AuthSchemaInstrumentedTest" time="2.091" />
+    <testcase name="seedContainsFiveTablesAndNoOrders" classname="com.example.fruitshop.AuthSchemaInstrumentedTest" time="2.072" />
+    <testcase name="registrationNormalizesProfileAndPreservesPassword" classname="com.example.fruitshop.AuthSchemaInstrumentedTest" time="3.752" />
+    <testcase name="duplicateUsernameIsCaseInsensitiveAndAtomic" classname="com.example.fruitshop.AuthSchemaInstrumentedTest" time="2.479" />
+    <testcase name="reopenDoesNotReseedOrLoseData" classname="com.example.fruitshop.AuthSchemaInstrumentedTest" time="3.084" />
+  </testsuite>
+  <testsuite name="com.example.fruitshop.SessionInstrumentedTest" tests="5" failures="0" errors="0" skipped="0" time="2.488" timestamp="2026-10-23T10:05:53" hostname="localhost">
+    <properties>
+      <property name="device" value="StudentManager_API35(AVD) - 15" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="listenersObserveSwitchAndLogoutAndCanBeRemoved" classname="com.example.fruitshop.SessionInstrumentedTest" time="0.003" />
+    <testcase name="rememberRestoresAndLogoutClearsPreferences" classname="com.example.fruitshop.SessionInstrumentedTest" time="0.002" />
+    <testcase name="previousApplicationPreferencesCannotRestoreFruitShopSession" classname="com.example.fruitshop.SessionInstrumentedTest" time="0.002" />
+    <testcase name="nonRememberedSessionIsMemoryOnlyAndClearsOldRememberedLogin" classname="com.example.fruitshop.SessionInstrumentedTest" time="0.001" />
+    <testcase name="forgedPreferenceRoleDoesNotGrantAdmin" classname="com.example.fruitshop.SessionInstrumentedTest" time="2.48" />
+  </testsuite>
+</testsuites>
