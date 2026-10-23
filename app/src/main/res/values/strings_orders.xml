@@ -1,0 +1,27 @@
+<resources>
+    <string name="catalog_title">Trái cây</string>
+    <string name="cart_title">Giỏ hàng</string>
+    <string name="cart_empty">Giỏ hàng đang trống.</string>
+    <string name="cart_total">Tổng tạm tính: %1$s\nBấm vào một món để đổi số lượng hoặc xóa.</string>
+    <string name="cart_row">%1$s\n%2$s × %3$s/%4$s = %5$s</string>
+    <string name="cart_checkout">Đặt hàng</string>
+    <string name="cart_confirm_title">Xác nhận đặt hàng</string>
+    <string name="cart_confirm_message">Tổng tiền: %1$s.\nĐặt đơn này?</string>
+    <string name="cart_quantity_hint">Số lượng (%1$s)</string>
+    <string name="cart_quantity_positive">Số lượng phải lớn hơn 0.</string>
+    <string name="cart_save">Lưu</string>
+    <string name="cart_remove">Xóa món</string>
+    <string name="cart_added">Đã thêm vào giỏ.</string>
+    <string name="cart_placed">Đặt hàng thành công. Mã đơn #%1$d.</string>
+    <string name="orders_title">Đơn hàng</string>
+    <string name="orders_empty">Chưa có đơn hàng nào.</string>
+    <string name="orders_count">%1$d đơn hàng. Bấm vào một đơn để xem chi tiết.</string>
+    <string name="order_row">Đơn #%1$d · %2$s\n%3$s · %4$s</string>
+    <string name="order_item_row">%1$s\n%2$s × %3$s/%4$s = %5$s</string>
+    <string name="order_total">Tổng tiền: %1$s</string>
+    <string name="order_detail_title">Đơn #%1$d · %2$s</string>
+    <string name="order_close">Đóng</string>
+    <string name="status_pending">Chờ xác nhận</string>
+    <string name="status_confirmed">Đã xác nhận</string>
+    <string name="status_completed">Hoàn thành</string>
+</resources>

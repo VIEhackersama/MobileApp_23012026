@@ -1,0 +1,10 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" />
+    <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="3dp" android:indeterminate="true" android:visibility="gone" />
+    <TextView android:id="@+id/orders_summary" style="@style/Body" android:paddingHorizontal="24dp" android:paddingVertical="12dp" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ListView android:id="@+id/orders_list" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingHorizontal="12dp" />
+        <TextView android:id="@+id/orders_empty" style="@style/Body" android:layout_height="match_parent" android:gravity="center" android:padding="24dp" />
+    </FrameLayout>
+    <com.google.android.material.button.MaterialButton android:id="@+id/orders_action" android:layout_width="match_parent" android:layout_height="56dp" android:layout_margin="24dp" android:visibility="gone" app:cornerRadius="14dp" />
+</LinearLayout>
