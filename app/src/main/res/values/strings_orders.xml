@@ -1,5 +1,4 @@
 <resources>
-    <string name="catalog_title">Trái cây</string>
     <string name="cart_title">Giỏ hàng</string>
     <string name="cart_empty">Giỏ hàng đang trống.</string>
     <string name="cart_total">Tổng tạm tính: %1$s\nBấm vào một món để đổi số lượng hoặc xóa.</string>

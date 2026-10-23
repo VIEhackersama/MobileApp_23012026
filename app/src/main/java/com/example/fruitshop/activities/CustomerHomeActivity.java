@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import com.example.fruitshop.R;
@@ -12,6 +13,7 @@ import com.example.fruitshop.core.ErrorCode;
 import com.example.fruitshop.core.Money;
 import com.example.fruitshop.core.Quantities;
 import com.example.fruitshop.dal.FruitRepository;
+import com.example.fruitshop.dto.CartLine;
 import com.example.fruitshop.models.Fruit;
 import com.example.fruitshop.models.Role;
 import com.google.android.material.appbar.MaterialToolbar;
@@ -43,6 +45,13 @@ public final class CustomerHomeActivity extends AccountHomeActivity {
             long quantity = data.getLongExtra(FruitCatalogActivity.EXTRA_QUANTITY, 0);
             long price = data.getLongExtra(FruitCatalogActivity.EXTRA_QUOTED_PRICE, 0);
             if (fruitId <= 0 || quantity <= 0 || price <= 0) return;
+            try {
+                app.cart.add(app.session.accountId(), new CartLine(fruitId, quantity, price));
+                Toast.makeText(this, R.string.cart_added, Toast.LENGTH_SHORT).show();
+            } catch (DomainException error) {
+                showError(error.getMessage());
+                return;
+            }
             selectedAccountId = app.session.accountId();
             selectedFruitId = fruitId;
             selectedQuantity = quantity;
@@ -51,12 +60,16 @@ public final class CustomerHomeActivity extends AccountHomeActivity {
         });
         findViewById(R.id.customer_catalog).setOnClickListener(v ->
                 catalogLauncher.launch(new Intent(this, FruitCatalogActivity.class)));
+        findViewById(R.id.customer_cart).setOnClickListener(v -> startActivity(new Intent(this, CartActivity.class)));
+        findViewById(R.id.customer_orders).setOnClickListener(v -> startActivity(new Intent(this, OrderListActivity.class)));
     }
 
     @Override protected Role requiredRole() { return Role.CUSTOMER; }
 
     @Override protected void onAuthenticated() {
         findViewById(R.id.customer_catalog).setVisibility(View.VISIBLE);
+        findViewById(R.id.customer_cart).setVisibility(View.VISIBLE);
+        findViewById(R.id.customer_orders).setVisibility(View.VISIBLE);
         long actorId = user.id;
         if (selectedFruitId > 0) {
             if (selectedAccountId == actorId) showSelection();

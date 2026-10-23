@@ -11,6 +11,8 @@
                     <TextView style="@style/Body" android:layout_marginTop="8dp" android:text="@string/fruit_selection_note" android:textSize="12sp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.button.MaterialButton android:id="@+id/customer_cart" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="16dp" android:text="@string/cart_title" android:visibility="gone" app:cornerRadius="14dp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/customer_orders" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="12dp" android:text="@string/orders_title" android:visibility="gone" app:cornerRadius="14dp" />
             <com.google.android.material.button.MaterialButton android:id="@+id/logout" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="28dp" android:text="@string/logout" app:cornerRadius="14dp" />
         </LinearLayout>
     </ScrollView>
