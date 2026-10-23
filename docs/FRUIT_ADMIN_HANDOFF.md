@@ -6,12 +6,12 @@ Tài liệu này mô tả phần người 2 trên nền `com.example.fruitshop` 
 
 | Thành phần | Người 2 thực hiện | Liên quan đến người khác |
 | --- | --- | --- |
-| Danh mục trái cây | `FruitRepository` triển khai `FruitDataSource`; `FruitCatalogActivity` hiển thị, tìm kiếm và xem chi tiết | Người 1 cung cấp schema/model/đăng nhập; người 3 mở danh mục từ trang Customer |
+| Danh mục trái cây | `FruitRepository` triển khai `FruitDataSource`; Admin và Customer đều mở được `FruitCatalogActivity` để hiển thị, tìm kiếm và xem chi tiết | Người 1 cung cấp schema/model/đăng nhập |
 | Quản lý trái cây | Admin thêm, sửa, xóa; kiểm tra giá, tồn, ngày và đơn vị | Người 1 giữ `DBHelper` và các quy tắc dùng chung |
-| Chọn mua | Customer nhập số lượng và nhận dữ liệu mặt hàng đã xem | Người 3 thêm vào `CartStore`, checkout và trừ tồn |
+| Chọn mua | Customer mở danh mục từ trang chủ, chọn số lượng và xem lựa chọn cùng tiền tạm tính trên CustomerHome | Người 3 chuyển kết quả chọn mua vào `CartStore`, checkout và trừ tồn |
 | Quản lý đơn phía Admin | `AdminOrdersActivity` hiển thị đơn, chi tiết và nút chuyển trạng thái | Người 3 triển khai `OrderDataSource`; người 1 nối repository vào `FruitShopApp` |
 
-Người 2 không tạo database, model hoặc hàm checkout khác. `FruitRepository` dùng `DBHelper`, `AuthRepository`, `BusinessDates`, `Quantities` và `Money` của nền chung.
+Người 2 không tạo database, model hoặc hàm checkout khác. `FruitRepository` dùng `DBHelper`, `AuthRepository` và `BusinessDates` của nền chung; giao diện dùng thêm `Quantities` và `Money`.
 
 ## 2. Quy tắc dữ liệu và quyền
 
@@ -46,9 +46,9 @@ Thay đổi giá hoặc tồn có thể làm giỏ cũ không còn phù hợp. N
 
 `delete` kiểm tra Admin rồi xóa bản ghi `Fruit` trong transaction. Khóa ngoại `OrderItem.fruitId ON DELETE SET NULL` chỉ bỏ liên kết đến mặt hàng; `fruitName`, `unit`, `unitPrice`, `quantity`, `lineTotal` của đơn cũ vẫn giữ nguyên. Nếu Customer còn mặt hàng này trong giỏ, checkout của người 3 phải báo không tìm thấy và không tạo đơn/trừ tồn.
 
-### 3.5 Chọn mua — Customer
+### 3.5 Customer xem và chọn trái cây
 
-Customer mở chi tiết và nhập lượng mua: `KG` tối đa ba chữ số thập phân (nhận dấu chấm hoặc phẩy), `PIECE`/`PACK` là số nguyên dương. Trước khi trả lựa chọn, màn hình đọc lại `detail`, kiểm tra tồn và so giá vừa xem. Hàng hết hạn/hết kho biến mất khỏi chi tiết Customer; giá vừa đổi yêu cầu khách đóng hộp thoại và xem lại.
+Customer mở danh mục từ `CustomerHomeActivity`, xem chi tiết và nhập lượng mua: `KG` tối đa ba chữ số thập phân (nhận dấu chấm hoặc phẩy), `PIECE`/`PACK` là số nguyên dương. Trước khi trả lựa chọn, màn hình đọc lại `detail`, kiểm tra tồn và so giá vừa xem. Danh sách Customer lọc hàng hết hạn/hết kho; nếu mặt hàng đổi trạng thái sau khi tải danh sách, `detail` trả `NOT_FOUND`. Giá vừa đổi yêu cầu khách đóng hộp thoại và xem lại.
 
 Khi hợp lệ, Activity trả `RESULT_OK` với ba `long` extras:
 
@@ -58,7 +58,7 @@ Khi hợp lệ, Activity trả `RESULT_OK` với ba `long` extras:
 | `quantity` | Lượng theo đơn vị cơ sở: gram hoặc số quả/phần |
 | `quoted_price` | Giá VND/đơn vị khách vừa xem |
 
-Màn hình này **chưa đặt đơn và chưa trừ tồn**. Người 3 tạo `CartLine(fruitId, quantity, quotedUnitPrice)` và gọi `CartStore.add`. Checkout kiểm tra lại quyền, giá, hạn và tồn trong một transaction vì dữ liệu có thể thay đổi sau lúc chọn mua.
+`CustomerHomeActivity` nhận kết quả, đọc lại mặt hàng và hiển thị tên, số lượng, tiền tạm tính. Lựa chọn chỉ giữ trong màn hình, không phải giỏ hoặc đơn hàng; màn hình **chưa đặt đơn và chưa trừ tồn**. Người 3 chuyển kết quả này thành `CartLine(fruitId, quantity, quotedUnitPrice)` rồi gọi `CartStore.add`. Checkout kiểm tra lại quyền, giá, hạn và tồn trong một transaction vì dữ liệu có thể thay đổi sau lúc chọn mua.
 
 ## 4. Đơn hàng và trạng thái phía Admin
 
@@ -91,6 +91,6 @@ Các quan hệ quan trọng:
 
 ## 6. Điểm nối và kiểm thử
 
-- Hai Activity mới đã được đăng ký trong manifest; AdminHome mở danh mục. `CustomerHomeActivity` thuộc người 3, cần mở `FruitCatalogActivity` bằng Activity Result API và xử lý ba extra ở mục 3.5.
+- Hai Activity mới đã được đăng ký trong manifest; AdminHome và CustomerHome đều mở danh mục. CustomerHome dùng Activity Result API nhận ba extra ở mục 3.5 và hiển thị lựa chọn tạm thời. Người 3 cần nối kết quả này với `CartStore` khi triển khai giỏ hàng.
 - `FruitRepositoryInstrumentedTest` dùng `DBHelper` thật với database thử và đồng hồ cố định để kiểm tra CRUD, quyền, tìm kiếm, hết hạn/hết tồn, dữ liệu không hợp lệ và snapshot sau khi xóa. Test Android đã biên dịch; cần emulator/thiết bị để chạy.
 - Build APK, unit test và lint đã chạy thành công ở trạng thái hiện tại. Lint có 0 lỗi; các cảnh báo còn lại thuộc cấu hình/tài nguyên nền.

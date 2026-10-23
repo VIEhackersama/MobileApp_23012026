@@ -1,5 +1,10 @@
 <resources>
     <string name="fruit_catalog">Trái cây</string>
+    <string name="fruit_browse">Xem và chọn trái cây</string>
+    <string name="fruit_selection_title">Trái cây vừa chọn</string>
+    <string name="fruit_selection_details">%1$s · %2$s\nTạm tính: %3$s</string>
+    <string name="fruit_selection_note">Đây là lựa chọn tạm thời, chưa phải đơn hàng.</string>
+    <string name="fruit_selection_price_changed">Giá đã thay đổi. Vui lòng chọn lại trái cây.</string>
     <string name="fruit_admin_orders">Quản lý đơn hàng</string>
     <string name="fruit_count">%1$d mặt hàng</string>
     <string name="fruit_item_summary">%1$s · %2$s/%3$s</string>

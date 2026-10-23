@@ -59,10 +59,10 @@ public class AccountUiInstrumentedTest {
         onView(withId(R.id.error)).check(matches(allOf(isDisplayed(), withText(containsString("không đúng")))));
         onView(withId(R.id.login)).check(matches(isEnabled()));
     }
-    @Test public void adminHomeOnlyShowsAccountFoundation() throws Exception {
+    @Test public void adminHomeShowsCatalogAndLogout() throws Exception {
         login("admin01", "admin123");
-        onView(withId(R.id.role)).check(matches(withText(R.string.admin_label)));
-        onView(withId(R.id.profile)).check(matches(withEffectiveVisibility(Visibility.GONE)));
+        onView(withText(R.string.fruit_catalog)).check(matches(isDisplayed()));
+        onView(withId(R.id.customer_catalog)).check(matches(withEffectiveVisibility(Visibility.GONE)));
         onView(withId(R.id.logout)).check(matches(isDisplayed()));
     }
     @Test public void registrationValidatesAndAutomaticallySignsInCustomer() throws Exception {
@@ -74,14 +74,16 @@ public class AccountUiInstrumentedTest {
         onView(withId(R.id.error)).check(matches(withText(containsString("chưa khớp"))));
         fill(R.id.confirm_password, "abc123");
         onView(withId(R.id.register)).perform(scrollTo(), click()); awaitDatabase();
-        onView(withId(R.id.role)).check(matches(withText(R.string.customer_label)));
-        onView(withId(R.id.profile)).check(matches(withText(containsString("ui@example.com"))));
+        onView(withId(R.id.customer_catalog)).check(matches(isDisplayed()));
+        com.example.fruitshop.models.Customer profile = app.databaseExecutor.submit(
+                () -> app.auth.requireCustomer(app.session.accountId())).get(30, TimeUnit.SECONDS);
+        org.junit.Assert.assertEquals("ui@example.com", profile.email);
         org.junit.Assert.assertFalse(app.getSharedPreferences("fruit_shop_session", 0).getBoolean("remember", false));
     }
     @Test public void logoutClearsBackStackAndCannotRestoreProtectedScreen() throws Exception {
         onView(withId(R.id.remember)).perform(scrollTo(), click());
         login("customer01", "customer123");
-        onView(withId(R.id.role)).check(matches(withText(R.string.customer_label)));
+        onView(withId(R.id.customer_catalog)).check(matches(isDisplayed()));
         onView(withId(R.id.logout)).perform(scrollTo(), click());
         onView(withId(R.id.login)).check(matches(isDisplayed()));
         pressBackUnconditionally();
