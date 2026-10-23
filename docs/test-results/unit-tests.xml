@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.studentmanager.dal.PasswordHasherTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T07:47:15.009Z" hostname="HKSM-R7000P" time="0.438">
+<testsuite name="com.example.fruitshop.core.FoundationTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:59:13.418Z" hostname="HKSM-R7000P" time="0.285">
   <properties/>
-  <testcase name="malformedHashesAreRejected" classname="com.example.studentmanager.dal.PasswordHasherTest" time="0.003"/>
-  <testcase name="passwordRoundTripPreservesUnicodeAndWhitespace" classname="com.example.studentmanager.dal.PasswordHasherTest" time="0.252"/>
-  <testcase name="independentSaltsProduceDifferentHashes" classname="com.example.studentmanager.dal.PasswordHasherTest" time="0.179"/>
+  <testcase name="kilogramsUseExactGrams" classname="com.example.fruitshop.core.FoundationTest" time="0.003"/>
+  <testcase name="datesRejectImpossibleCalendarDays" classname="com.example.fruitshop.core.FoundationTest" time="0.004"/>
+  <testcase name="passwordsPreserveUnicodeAndWhitespace" classname="com.example.fruitshop.core.FoundationTest" time="0.272"/>
+  <testcase name="malformedHashesFailClosed" classname="com.example.fruitshop.core.FoundationTest" time="0.001"/>
+  <testcase name="mixedUnitMoneyHasNoFloatingPointError" classname="com.example.fruitshop.core.FoundationTest" time="0.0"/>
+  <testcase name="invalidAndOverflowingQuantitiesAreRejected" classname="com.example.fruitshop.core.FoundationTest" time="0.001"/>
+  <testcase name="expiryTodayIsValidAndYesterdayIsExpired" classname="com.example.fruitshop.core.FoundationTest" time="0.001"/>
+  <testcase name="dongRoundingIsHalfUpAndOverflowIsRejected" classname="com.example.fruitshop.core.FoundationTest" time="0.0"/>
+  <testcase name="businessDateUsesInjectedDeviceTimezone" classname="com.example.fruitshop.core.FoundationTest" time="0.001"/>
+  <testcase name="pieceAndPackQuantitiesAreIntegers" classname="com.example.fruitshop.core.FoundationTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

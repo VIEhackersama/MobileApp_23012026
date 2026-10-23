@@ -1,21 +1,20 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="28dp">
-        <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_school" android:contentDescription="@string/app_name" android:layout_marginTop="16dp" />
-        <TextView style="@style/Body" android:text="@string/brand" android:letterSpacing="0.12" android:textSize="11sp" android:layout_marginTop="20dp" />
-        <TextView style="@style/Title" android:text="@string/welcome" android:textSize="38sp" android:layout_marginTop="16dp" />
+        <ImageView android:layout_width="56dp" android:layout_height="56dp" android:src="@drawable/ic_fruit" android:contentDescription="@string/app_name" android:layout_marginTop="16dp" />
+        <TextView style="@style/Body" android:text="@string/brand" android:letterSpacing="0.16" android:textSize="12sp" android:layout_marginTop="24dp" />
+        <TextView style="@style/Title" android:text="@string/login_title" android:textSize="38sp" android:layout_marginTop="16dp" />
         <TextView style="@style/Body" android:text="@string/login_intro" android:layout_marginTop="12dp" android:layout_marginBottom="28dp" />
         <com.google.android.material.textfield.TextInputLayout style="@style/Field" android:hint="@string/username">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/username" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textNoSuggestions" android:singleLine="true" android:autofillHints="username" android:imeOptions="actionNext" />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout style="@style/Field" android:hint="@string/password" app:endIconMode="password_toggle">
-            <com.google.android.material.textfield.TextInputEditText android:id="@+id/password" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:singleLine="true" android:autofillHints="password" android:imeOptions="actionDone" />
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/password" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:singleLine="true" android:saveEnabled="false" android:autofillHints="password" android:imeOptions="actionDone" />
         </com.google.android.material.textfield.TextInputLayout>
         <CheckBox android:id="@+id/remember" android:layout_width="match_parent" android:layout_height="48dp" android:text="@string/remember" />
         <TextView android:id="@+id/error" style="@style/Body" android:textColor="#B3261E" android:accessibilityLiveRegion="polite" android:visibility="gone" android:layout_marginBottom="8dp" />
         <com.google.android.material.button.MaterialButton android:id="@+id/login" android:layout_width="match_parent" android:layout_height="56dp" android:text="@string/login" app:cornerRadius="14dp" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/open_register" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="@string/register_link" />
         <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="4dp" android:indeterminate="true" android:visibility="gone" />
-        <TextView style="@style/Body" android:text="@string/demo_accounts" android:textSize="13sp" android:layout_marginTop="28dp" />
-        <TextView style="@style/Body" android:text="@string/offline" android:textSize="12sp" android:layout_marginTop="24dp" android:layout_marginBottom="16dp" />
+        <TextView style="@style/Body" android:text="@string/offline" android:textSize="12sp" android:layout_marginTop="28dp" android:layout_marginBottom="16dp" />
     </LinearLayout>
 </ScrollView>

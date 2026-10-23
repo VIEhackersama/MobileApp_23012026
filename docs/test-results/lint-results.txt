@@ -37,4 +37,64 @@ C:\Users\Admin\Documents\VPProjects\StudentManager\app\build.gradle.kts:24: Warn
    However, you may simply not be aware that a more recent version is
    available, and that is what this lint check helps find.
 
-0 errors, 4 warnings
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\layout\activity_list.xml:1: Warning: The resource R.layout.activity_list appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+^
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\drawable\ic_add.xml:1: Warning: The resource R.drawable.ic_add appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+^
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\layout\item_record.xml:1: Warning: The resource R.layout.item_record appears to be unused [UnusedResources]
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:strokeColor="@color/line" app:strokeWidth="1dp">
+^
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:20: Warning: The resource R.string.home_admin appears to be unused [UnusedResources]
+    <string name="home_admin">Tài khoản Admin</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:21: Warning: The resource R.string.home_customer appears to be unused [UnusedResources]
+    <string name="home_customer">Tài khoản khách hàng</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:33: Warning: The resource R.string.add appears to be unused [UnusedResources]
+    <string name="add">Thêm</string>
+            ~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:34: Warning: The resource R.string.edit appears to be unused [UnusedResources]
+    <string name="edit">Sửa</string>
+            ~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:35: Warning: The resource R.string.delete appears to be unused [UnusedResources]
+    <string name="delete">Xóa</string>
+            ~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\themes.xml:7: Warning: The resource R.color.line appears to be unused [UnusedResources]
+    <color name="line">#DCE3DB</color>
+           ~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests=true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests=true.
+
+   Available options:
+
+   **skip-libraries** (default is true):
+   Whether the unused resource check should skip reporting unused resources in libraries.
+
+   Many libraries will declare resources that are part of the library surface; other modules depending on the library will also reference the resources. To avoid reporting all these resources as unused (in the context of a library), the unused resource check normally skips reporting unused resources in libraries. Instead, run the unused resource check on the consuming app module (along with `checkDependencies=true`).
+
+   However, there are cases where you want to check that all the resources declared in a library are used; in that case, you can disable the skip option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UnusedResources">
+           <option name="skip-libraries" value="true" />
+       </issue>
+   </lint>
+   ```
+
+0 errors, 13 warnings
