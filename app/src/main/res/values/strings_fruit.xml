@@ -40,11 +40,5 @@
     <string name="fruit_quantity">Tồn kho (kg hoặc số nguyên)</string>
     <string name="fruit_expiry">Hạn dùng (YYYY-MM-DD)</string>
     <string name="fruit_description">Mô tả</string>
-    <string name="fruit_order_empty">Chưa có đơn hàng.</string>
     <string name="fruit_orders_unavailable">Chưa kết nối chức năng đơn hàng.</string>
-    <string name="fruit_order_row">#%1$d · %2$s\n%3$s · %4$s</string>
-    <string name="fruit_order_status">Trạng thái: %1$s</string>
-    <string name="fruit_order_total">Tổng: %1$s</string>
-    <string name="fruit_order_title">Đơn #%1$d</string>
-    <string name="fruit_advance_status">Chuyển sang %1$s</string>
 </resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.fruitshop.core.FoundationTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-23T11:34:02.300Z" hostname="HKSM-R7000P" time="0.683">
+  <properties/>
+  <testcase name="kilogramsUseExactGrams" classname="com.example.fruitshop.core.FoundationTest" time="0.002"/>
+  <testcase name="datesRejectImpossibleCalendarDays" classname="com.example.fruitshop.core.FoundationTest" time="0.011"/>
+  <testcase name="passwordsPreserveUnicodeAndWhitespace" classname="com.example.fruitshop.core.FoundationTest" time="0.66"/>
+  <testcase name="malformedHashesFailClosed" classname="com.example.fruitshop.core.FoundationTest" time="0.0"/>
+  <testcase name="mixedUnitMoneyHasNoFloatingPointError" classname="com.example.fruitshop.core.FoundationTest" time="0.0"/>
+  <testcase name="invalidAndOverflowingQuantitiesAreRejected" classname="com.example.fruitshop.core.FoundationTest" time="0.001"/>
+  <testcase name="expiryTodayIsValidAndYesterdayIsExpired" classname="com.example.fruitshop.core.FoundationTest" time="0.001"/>
+  <testcase name="dongRoundingIsHalfUpAndOverflowIsRejected" classname="com.example.fruitshop.core.FoundationTest" time="0.001"/>
+  <testcase name="businessDateUsesInjectedDeviceTimezone" classname="com.example.fruitshop.core.FoundationTest" time="0.001"/>
+  <testcase name="pieceAndPackQuantitiesAreIntegers" classname="com.example.fruitshop.core.FoundationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

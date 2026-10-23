@@ -100,7 +100,15 @@ public final class OrderRepository implements OrderDataSource {
                         SaleUnit.valueOf(c.getString(4)), c.getLong(5), c.getLong(6), c.getLong(7)));
             }
         }
-        return new OrderDetails(found.get(0), items);
+        Order order = found.get(0);
+        Customer customer;
+        // Read contact information only after checking access to this order.
+        try (Cursor c = helper.getReadableDatabase().rawQuery(
+                "SELECT id,fullname,phone,email,accountId FROM Customer WHERE id=?", args(order.customerId))) {
+            if (!c.moveToFirst()) throw notFound();
+            customer = new Customer(c.getLong(0), c.getString(1), c.getString(2), c.getString(3), c.getLong(4));
+        }
+        return new OrderDetails(order, customer, items);
     }
 
     /** Admin only, one step at a time. Stock was already subtracted when the order was placed. */

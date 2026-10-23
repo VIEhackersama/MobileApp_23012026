@@ -51,6 +51,12 @@ public class OrderRepositoryInstrumentedTest {
         assertEquals(75000, details.order.totalAmount);
         assertEquals(OrderStatus.PENDING, details.order.status);
         assertEquals(3, details.items.size());
+        assertNotNull(details.customer);
+        assertEquals(details.order.customerId, details.customer.id);
+        assertEquals(customer1, details.customer.accountId);
+        assertEquals("Nguyễn Minh An", details.customer.fullname);
+        assertEquals("0901234567", details.customer.phone);
+        assertEquals("minhan@example.com", details.customer.email);
         assertEquals(11500, stock("Cam sành"));
         assertEquals(38, stock("Táo đỏ"));
         assertEquals(14, stock("Trái cây cắt sẵn"));
@@ -94,6 +100,7 @@ public class OrderRepositoryInstrumentedTest {
         assertEquals(1, orders.list(customer1).size());
         assertEquals(0, orders.list(customer2).size());
         assertEquals(1, orders.list(admin).size());
+        assertEquals(customer1, orders.detail(admin, id).customer.accountId);
         expect(ErrorCode.NOT_FOUND, () -> orders.detail(customer2, id));
     }
 

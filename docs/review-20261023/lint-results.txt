@@ -1,0 +1,124 @@
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\build.gradle.kts:9: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk = 36
+        ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application or sdk runs on a version of Android that is more
+   recent than your targetSdk specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdk is
+   less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdk to the highest available value. Then
+   test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\build.gradle.kts:5: Warning: A newer version of compileSdk than 36 is available: 37 [GradleDependency]
+    compileSdk { version = release(36) { minorApiLevel = 1 } }
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\build.gradle.kts:22: Warning: A newer version of androidx.appcompat:appcompat than 1.7.1 is available: 1.8.0 [GradleDependency]
+    implementation("androidx.appcompat:appcompat:1.7.1")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\build.gradle.kts:24: Warning: A newer version of androidx.recyclerview:recyclerview than 1.2.1 is available: 1.4.0 [GradleDependency]
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\layout\activity_list.xml:1: Warning: The resource R.layout.activity_list appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+^
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\layout\item_record.xml:1: Warning: The resource R.layout.item_record appears to be unused [UnusedResources]
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:strokeColor="@color/line" app:strokeWidth="1dp">
+^
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:20: Warning: The resource R.string.home_admin appears to be unused [UnusedResources]
+    <string name="home_admin">Tài khoản Admin</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:21: Warning: The resource R.string.home_customer appears to be unused [UnusedResources]
+    <string name="home_customer">Tài khoản khách hàng</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:22: Warning: The resource R.string.greeting appears to be unused [UnusedResources]
+    <string name="greeting">Xin chào,\n%1$s.</string>
+            ~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:23: Warning: The resource R.string.account_label appears to be unused [UnusedResources]
+    <string name="account_label">TÀI KHOẢN</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:24: Warning: The resource R.string.admin_label appears to be unused [UnusedResources]
+    <string name="admin_label">QUẢN TRỊ VIÊN</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:25: Warning: The resource R.string.customer_label appears to be unused [UnusedResources]
+    <string name="customer_label">KHÁCH HÀNG</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:26: Warning: The resource R.string.admin_description appears to be unused [UnusedResources]
+    <string name="admin_description">Thông tin đăng nhập và phiên tài khoản của cửa hàng.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:27: Warning: The resource R.string.customer_description appears to be unused [UnusedResources]
+    <string name="customer_description">Thông tin liên hệ của bạn tại Fruit Shop.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:28: Warning: The resource R.string.account_username appears to be unused [UnusedResources]
+    <string name="account_username">Tên đăng nhập: %1$s</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:29: Warning: The resource R.string.account_role appears to be unused [UnusedResources]
+    <string name="account_role">Vai trò: %1$s</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:30: Warning: The resource R.string.customer_profile appears to be unused [UnusedResources]
+    <string name="customer_profile">%1$s\n%2$s\n%3$s</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:31: Warning: The resource R.string.offline appears to be unused [UnusedResources]
+    <string name="offline">Dữ liệu được lưu trên thiết bị</string>
+            ~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings.xml:33: Warning: The resource R.string.add appears to be unused [UnusedResources]
+    <string name="add">Thêm</string>
+            ~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings_orders.xml:2: Warning: The resource R.string.catalog_title appears to be unused [UnusedResources]
+    <string name="catalog_title">Trái cây</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\Documents\VPProjects\StudentManager\app\src\main\res\values\strings_orders.xml:14: Warning: The resource R.string.cart_added appears to be unused [UnusedResources]
+    <string name="cart_added">Đã thêm vào giỏ.</string>
+            ~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests=true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests=true.
+
+   Available options:
+
+   **skip-libraries** (default is true):
+   Whether the unused resource check should skip reporting unused resources in libraries.
+
+   Many libraries will declare resources that are part of the library surface; other modules depending on the library will also reference the resources. To avoid reporting all these resources as unused (in the context of a library), the unused resource check normally skips reporting unused resources in libraries. Instead, run the unused resource check on the consuming app module (along with `checkDependencies=true`).
+
+   However, there are cases where you want to check that all the resources declared in a library are used; in that case, you can disable the skip option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UnusedResources">
+           <option name="skip-libraries" value="true" />
+       </issue>
+   </lint>
+   ```
+
+0 errors, 21 warnings
