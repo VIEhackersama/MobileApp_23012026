@@ -17,4 +17,4 @@ Tài khoản local seed khi tạo database lần đầu:
 5. Đăng xuất, đăng nhập lại với ghi nhớ. Force-stop và mở lại: khôi phục đúng vai trò.
 6. Đăng xuất, nhấn Back và mở lại: không vào lại trang đã đăng nhập.
 
-Chỉ demo phần nền tảng/tài khoản. Chưa có danh mục, CRUD trái cây, giỏ, checkout hoặc lịch sử đơn để trình diễn.
+Các bước trên demo phần tài khoản. Ở phiên bản hiện tại, Admin có thể mở **Trái cây** để tìm, thêm, sửa, xóa; Customer có thể mở **Xem và chọn trái cây**, chọn số lượng rồi xem tiền tạm tính trên trang chủ. Giỏ hàng, checkout và lịch sử đơn chưa được tích hợp.

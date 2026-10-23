@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import com.example.fruitshop.R;
 
-/** Account-only foundation UI. Business modules are deliberately not wired yet. */
+/** Shared account home layout for the Admin and Customer screens. */
 public abstract class AccountHomeActivity extends BaseActivity {
     @Override protected void onCreate(Bundle state) {
         super.onCreate(state); setContentView(R.layout.activity_account_home); setupWindow();
