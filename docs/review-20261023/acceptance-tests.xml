@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="3" failures="2" errors="0" skipped="0" time="7.485" timestamp="2026-10-23T11:37:10" hostname="localhost">
+  <testsuite name="com.example.fruitshop.HandoffReviewInstrumentedTest" tests="3" failures="2" errors="0" skipped="0" time="6.657" timestamp="2026-10-23T11:37:10" hostname="localhost">
+    <properties>
+      <property name="device" value="StudentManager_API35(AVD) - 15" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="cartMustRejectCurrentAdmin" classname="com.example.fruitshop.HandoffReviewInstrumentedTest" time="0.018">
+      <failure>java.lang.AssertionError: CartStore accepted ADMIN; contract requires a current CUSTOMER
+at org.junit.Assert.fail(Assert.java:89)
+at com.example.fruitshop.HandoffReviewInstrumentedTest.cartMustRejectCurrentAdmin(HandoffReviewInstrumentedTest.java:85)
+</failure>
+    </testcase>
+    <testcase name="cartMergesAndClearsOnAccountSwitch" classname="com.example.fruitshop.HandoffReviewInstrumentedTest" time="0.002" />
+    <testcase name="selectedFruitMustBeAddedToCart" classname="com.example.fruitshop.HandoffReviewInstrumentedTest" time="6.637">
+      <failure>java.lang.AssertionError: Selecting a fruit must add one cart line; a preview alone cannot be checked out expected:&lt;1&gt; but was:&lt;0&gt;
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at com.example.fruitshop.HandoffReviewInstrumentedTest.selectedFruitMustBeAddedToCart(HandoffReviewInstrumentedTest.java:60)
+</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

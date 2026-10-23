@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/root"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar"
+        android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" />
+    <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent" android:layout_height="3dp" android:indeterminate="true" android:visibility="gone" />
+    <LinearLayout android:id="@+id/admin_order_error" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:visibility="gone">
+        <TextView android:id="@+id/admin_order_error_message" style="@style/Body" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/admin_order_retry"
+            style="?attr/materialButtonOutlinedStyle" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/admin_orders_retry" />
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:id="@+id/admin_order_content" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:visibility="gone">
+            <TextView android:id="@+id/admin_order_status" style="@style/OrderStatus" />
+            <TextView android:id="@+id/admin_order_date" style="@style/Body" android:layout_marginTop="10dp" />
+            <TextView style="@style/OrderSection" android:layout_marginTop="26dp" android:text="@string/admin_order_customer_section" />
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@android:color/white" app:cardCornerRadius="16dp"
+                app:cardElevation="0dp" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+                    <TextView android:id="@+id/admin_order_customer" style="@style/OrderSection" />
+                    <TextView android:id="@+id/admin_order_phone" style="@style/Body"
+                        android:layout_marginTop="8dp" android:autoLink="phone" android:textColorLink="@color/primary" />
+                    <TextView android:id="@+id/admin_order_email" style="@style/Body"
+                        android:layout_marginTop="4dp" android:autoLink="email" android:textColorLink="@color/primary" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView android:id="@+id/admin_order_products_heading" style="@style/OrderSection"
+                android:layout_marginTop="26dp" android:text="@string/admin_order_products_section" />
+            <TextView android:id="@+id/admin_order_item_count" style="@style/Body" android:layout_marginTop="4dp" />
+            <LinearLayout android:id="@+id/admin_order_items" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:id="@+id/admin_order_footer" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical" android:background="@android:color/white"
+        android:padding="20dp" android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <TextView style="@style/Body" android:layout_width="0dp" android:layout_weight="1" android:text="@string/admin_order_total_label" />
+            <TextView android:id="@+id/admin_order_amount" style="@style/OrderSection"
+                android:layout_width="wrap_content" android:textSize="24sp" android:textColor="@color/primary" />
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/admin_order_advance"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginTop="14dp" android:visibility="gone" app:cornerRadius="14dp" />
+        <TextView android:id="@+id/admin_order_completed" style="@style/Body" android:gravity="center"
+            android:layout_marginTop="14dp" android:text="@string/admin_order_completed_note" android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

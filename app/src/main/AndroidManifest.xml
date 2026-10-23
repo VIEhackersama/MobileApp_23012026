@@ -5,6 +5,7 @@
         android:supportsRtl="true" android:theme="@style/Theme.FruitShop">
         <activity android:name=".activities.FruitCatalogActivity" android:exported="false" />
         <activity android:name=".activities.AdminOrdersActivity" android:exported="false" />
+        <activity android:name=".activities.AdminOrderDetailActivity" android:exported="false" />
         <activity android:name=".activities.AdminHomeActivity" android:exported="false" />
         <activity android:name=".activities.CustomerHomeActivity" android:exported="false" />
         <activity android:name=".activities.RegisterActivity" android:exported="false" />

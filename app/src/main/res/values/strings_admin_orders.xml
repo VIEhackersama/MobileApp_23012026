@@ -1,0 +1,23 @@
+<resources>
+    <string name="admin_orders_overview">Theo dõi đơn hàng</string>
+    <string name="admin_orders_count">%1$d đơn hàng · %2$d chờ xác nhận</string>
+    <string name="admin_order_number">Đơn #%1$d</string>
+    <string name="admin_order_customer_unknown">Chưa có thông tin khách hàng</string>
+    <string name="admin_order_item_count">%1$d mặt hàng</string>
+    <string name="admin_order_preview_item">%1$s × %2$s</string>
+    <string name="admin_order_view">Xem chi tiết  →</string>
+    <string name="admin_order_customer_section">Khách hàng</string>
+    <string name="admin_order_phone">Điện thoại: %1$s</string>
+    <string name="admin_order_email">Email: %1$s</string>
+    <string name="admin_order_products_section">Sản phẩm đã đặt</string>
+    <string name="admin_order_item_price">%1$s × %2$s/%3$s</string>
+    <string name="admin_order_total_label">Tổng đơn hàng</string>
+    <string name="admin_order_confirm">Xác nhận đơn hàng</string>
+    <string name="admin_order_complete">Hoàn tất đơn hàng</string>
+    <string name="admin_order_completed_note">Đơn hàng đã hoàn thành</string>
+    <string name="admin_order_updated">Đã cập nhật trạng thái đơn hàng.</string>
+    <string name="admin_orders_empty_title">Chưa có đơn hàng</string>
+    <string name="admin_orders_empty_body">Đơn khách đặt sẽ xuất hiện tại đây cùng thông tin liên hệ và sản phẩm.</string>
+    <string name="admin_orders_load_error">Không tải được đơn hàng. %1$s</string>
+    <string name="admin_orders_retry">Thử lại</string>
+</resources>

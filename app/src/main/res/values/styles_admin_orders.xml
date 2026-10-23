@@ -1,0 +1,22 @@
+<resources>
+    <color name="order_pending_background">#F7EDD9</color>
+    <color name="order_pending_text">#80531D</color>
+    <color name="order_confirmed_background">#E3EFE6</color>
+    <color name="order_completed_background">#EDF0EB</color>
+    <color name="order_item_surface">#F3F6F0</color>
+    <style name="OrderSection" parent="Body">
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="OrderStatus">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+</resources>
