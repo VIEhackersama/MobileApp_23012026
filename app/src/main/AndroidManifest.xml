@@ -8,6 +8,8 @@
         <activity android:name=".activities.AdminHomeActivity" android:exported="false" />
         <activity android:name=".activities.CustomerHomeActivity" android:exported="false" />
         <activity android:name=".activities.RegisterActivity" android:exported="false" />
+        <activity android:name=".activities.CartActivity" android:exported="false" />
+        <activity android:name=".activities.OrderListActivity" android:exported="false" />
         <activity android:name=".activities.LoginActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -14,6 +14,7 @@ import com.example.fruitshop.core.Quantities;
 import com.example.fruitshop.dal.FruitRepository;
 import com.example.fruitshop.models.Fruit;
 import com.example.fruitshop.models.Role;
+import com.google.android.material.appbar.MaterialToolbar;
 
 public final class CustomerHomeActivity extends AccountHomeActivity {
     private static final String STATE_ACCOUNT_ID = "selected_account_id";
