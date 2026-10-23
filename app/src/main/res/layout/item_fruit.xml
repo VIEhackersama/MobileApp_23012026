@@ -1,0 +1,22 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:layout_marginBottom="10dp" app:cardCornerRadius="14dp"
+    app:strokeColor="@color/line" app:strokeWidth="1dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:id="@+id/fruit_item_name" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/ink" android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView android:id="@+id/fruit_item_category" style="@style/Body" android:paddingTop="4dp" />
+        <TextView android:id="@+id/fruit_item_stock" style="@style/Body" android:paddingTop="4dp" />
+        <LinearLayout android:id="@+id/fruit_item_actions" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:gravity="end" android:visibility="gone">
+            <com.google.android.material.button.MaterialButton android:id="@+id/fruit_item_edit"
+                style="?attr/materialButtonOutlinedStyle" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/edit" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/fruit_item_delete"
+                style="?attr/materialButtonOutlinedStyle" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="@string/delete" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar"
+        android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" />
+    <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent" android:layout_height="3dp" android:indeterminate="true"
+        android:visibility="gone" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ListView android:id="@+id/admin_order_list" android:layout_width="match_parent"
+            android:layout_height="match_parent" android:padding="16dp" />
+        <TextView android:id="@+id/admin_order_empty" style="@style/Body"
+            android:layout_height="match_parent" android:gravity="center" android:text="@string/fruit_order_empty"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>
