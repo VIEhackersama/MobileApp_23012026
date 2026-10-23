@@ -5,10 +5,15 @@
     <color name="muted">#5E7069</color>
     <color name="paper">#F5F5EF</color>
     <color name="line">#DCE3DB</color>
-    <style name="Theme.StudentManager" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Theme.FruitShop" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorOnPrimary">@color/on_primary</item>
         <item name="colorSecondary">#B9D5B7</item>
+        <item name="colorSecondaryContainer">#DCEADB</item>
+        <item name="colorOnSecondaryContainer">@color/ink</item>
+        <item name="colorSurfaceContainerHigh">#F0F3EA</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="colorOnSurfaceVariant">@color/muted</item>
         <item name="colorSurface">#FFFFFF</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">@color/paper</item>

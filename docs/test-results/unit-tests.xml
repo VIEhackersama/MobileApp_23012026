@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.studentmanager.dal.PasswordHasherTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T07:47:15.009Z" hostname="HKSM-R7000P" time="0.438">
-  <properties/>
-  <testcase name="malformedHashesAreRejected" classname="com.example.studentmanager.dal.PasswordHasherTest" time="0.003"/>
-  <testcase name="passwordRoundTripPreservesUnicodeAndWhitespace" classname="com.example.studentmanager.dal.PasswordHasherTest" time="0.252"/>
-  <testcase name="independentSaltsProduceDifferentHashes" classname="com.example.studentmanager.dal.PasswordHasherTest" time="0.179"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
