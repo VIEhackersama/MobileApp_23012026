@@ -24,8 +24,6 @@ public final class AdminHomeActivity extends AccountHomeActivity {
 
     @Override protected Role requiredRole() { return Role.ADMIN; }
     @Override protected void onAuthenticated() {
-        accountLabels(R.string.admin_label, R.string.admin_description);
-        label(R.id.greeting, getString(R.string.greeting, user.username));
         // Person 1 wires an OrderDataSource provider when Person 3's repository is ready.
         ordersAction.setVisibility(getApplication() instanceof AdminOrdersActivity.OrderProvider ? View.VISIBLE : View.GONE);
     }
